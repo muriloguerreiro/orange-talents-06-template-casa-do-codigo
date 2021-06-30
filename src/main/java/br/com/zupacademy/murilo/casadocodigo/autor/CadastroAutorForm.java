@@ -33,4 +33,8 @@ public class CadastroAutorForm {
 		return new Autor(email, nome, descricao);
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
 }
