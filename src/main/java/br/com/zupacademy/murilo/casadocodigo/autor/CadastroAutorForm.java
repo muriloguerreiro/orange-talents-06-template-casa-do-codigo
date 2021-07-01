@@ -4,10 +4,13 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import br.com.zupacademy.murilo.casadocodigo.validacao.ValorUnico;
+
 public class CadastroAutorForm {
 
 	@NotBlank
 	@Email
+	@ValorUnico(domainClass = Autor.class, fieldName = "email")
 	private String email;
 	@NotBlank
 	private String nome;
