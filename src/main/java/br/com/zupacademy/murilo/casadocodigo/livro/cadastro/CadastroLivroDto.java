@@ -1,7 +1,9 @@
-package br.com.zupacademy.murilo.casadocodigo.livro;
+package br.com.zupacademy.murilo.casadocodigo.livro.cadastro;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+
+import br.com.zupacademy.murilo.casadocodigo.livro.Livro;
 
 public class CadastroLivroDto {
 	

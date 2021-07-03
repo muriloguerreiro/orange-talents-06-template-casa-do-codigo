@@ -1,7 +1,9 @@
-package br.com.zupacademy.murilo.casadocodigo.livro;
+package br.com.zupacademy.murilo.casadocodigo.livro.lista;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
+import br.com.zupacademy.murilo.casadocodigo.livro.Livro;
 
 public class ListaLivroDto {
 	
