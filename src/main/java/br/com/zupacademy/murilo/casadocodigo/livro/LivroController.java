@@ -1,10 +1,13 @@
 package br.com.zupacademy.murilo.casadocodigo.livro;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,5 +34,14 @@ public class LivroController {
 			livroRepository.save(livro);
 			
 		return ResponseEntity.ok(new CadastroLivroDto(livro));
+	}
+	
+	@GetMapping
+	public ResponseEntity<List<ListaLivroDto>> listar() {
+		List<Livro> lista = livroRepository.findAll();
+		
+		List<ListaLivroDto> listaDto = ListaLivroDto.converter(lista);
+		
+		return ResponseEntity.ok(listaDto);
 	}
 }
