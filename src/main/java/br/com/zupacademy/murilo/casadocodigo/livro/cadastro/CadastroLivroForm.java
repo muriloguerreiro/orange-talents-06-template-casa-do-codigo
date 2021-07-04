@@ -56,7 +56,7 @@ public class CadastroLivroForm {
 	private Long categoria_id;
 	
 	@NotNull
-	@Existe(domainClass = Categoria.class, fieldName = "id")
+	@Existe(domainClass = Autor.class, fieldName = "id")
 	private Long autor_id;
 	
 	@JsonCreator
