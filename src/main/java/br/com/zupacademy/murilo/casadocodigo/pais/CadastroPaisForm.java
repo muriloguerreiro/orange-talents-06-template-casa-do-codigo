@@ -2,7 +2,7 @@ package br.com.zupacademy.murilo.casadocodigo.pais;
 
 import javax.validation.constraints.NotBlank;
 
-import br.com.zupacademy.murilo.casadocodigo.validacao.ValorUnico;
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.ValorUnico;
 
 public class CadastroPaisForm {
 

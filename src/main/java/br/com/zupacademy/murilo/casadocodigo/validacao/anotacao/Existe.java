@@ -1,4 +1,4 @@
-package br.com.zupacademy.murilo.casadocodigo.validacao;
+package br.com.zupacademy.murilo.casadocodigo.validacao.anotacao;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+
+import br.com.zupacademy.murilo.casadocodigo.validacao.validadores.ValidaSeExiste;
 
 @Documented
 @Constraint(validatedBy = {ValidaSeExiste.class})

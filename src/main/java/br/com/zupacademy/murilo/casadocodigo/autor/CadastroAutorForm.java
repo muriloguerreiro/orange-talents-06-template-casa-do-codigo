@@ -4,7 +4,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import br.com.zupacademy.murilo.casadocodigo.validacao.ValorUnico;
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.ValorUnico;
 
 public class CadastroAutorForm {
 

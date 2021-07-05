@@ -1,4 +1,4 @@
-package br.com.zupacademy.murilo.casadocodigo.validacao;
+package br.com.zupacademy.murilo.casadocodigo.validacao.validadores;
 
 import java.util.List;
 
@@ -10,7 +10,9 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.util.Assert;
 
-public class ValidaSeExiste implements ConstraintValidator<Existe, Object> {
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.ValorUnico;
+
+public class ValidaValorUnico implements ConstraintValidator<ValorUnico, Object> {
 	
 	private String domainAttribute;
 	private Class<?> klass;
@@ -18,23 +20,20 @@ public class ValidaSeExiste implements ConstraintValidator<Existe, Object> {
 	private EntityManager manager;
 
 	@Override
-	public void initialize(Existe params) {
-		klass = params.domainClass();
+	public void initialize(ValorUnico params) {
 		domainAttribute = params.fieldName();
+		klass = params.domainClass();
 	}
-
+	
 	@Override
 	public boolean isValid(Object value, ConstraintValidatorContext context) {
 		Query query = manager.createQuery("select l from " + klass.getName() + " l where " + domainAttribute + " = :pValue");
 		query.setParameter("pValue", value);
 		List<?> list = query.getResultList();
-		Assert.state(list.size() <=1, "Foi encontrado mais de um " + klass	+ " com o atributo" + domainAttribute + " = " + value);
+		Assert.state(list.size() <= 1, "Foi encontrado mais de um " + klass	+ " com o atributo" + domainAttribute + " = " + value);
 		
-		if (list.size() == 1) {
-			return true;
-		}
-		
-		return false;
-	}
+		return list.isEmpty();
 
+	}
+	
 }

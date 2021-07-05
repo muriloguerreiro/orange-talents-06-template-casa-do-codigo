@@ -7,8 +7,8 @@ import javax.validation.constraints.NotNull;
 
 import br.com.zupacademy.murilo.casadocodigo.pais.Pais;
 import br.com.zupacademy.murilo.casadocodigo.pais.PaisRepository;
-import br.com.zupacademy.murilo.casadocodigo.validacao.Existe;
-import br.com.zupacademy.murilo.casadocodigo.validacao.ValorUnico;
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.Existe;
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.ValorUnico;
 
 public class CadastroEstadoForm {
 

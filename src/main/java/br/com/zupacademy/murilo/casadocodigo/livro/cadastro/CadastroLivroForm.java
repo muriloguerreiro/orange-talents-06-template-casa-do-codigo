@@ -19,8 +19,8 @@ import br.com.zupacademy.murilo.casadocodigo.autor.AutorRepository;
 import br.com.zupacademy.murilo.casadocodigo.categoria.Categoria;
 import br.com.zupacademy.murilo.casadocodigo.categoria.CategoriaRepository;
 import br.com.zupacademy.murilo.casadocodigo.livro.Livro;
-import br.com.zupacademy.murilo.casadocodigo.validacao.Existe;
-import br.com.zupacademy.murilo.casadocodigo.validacao.ValorUnico;
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.Existe;
+import br.com.zupacademy.murilo.casadocodigo.validacao.anotacao.ValorUnico;
 
 public class CadastroLivroForm {
 	
